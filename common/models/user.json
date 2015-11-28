@@ -1,0 +1,41 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "tracks": {
+      "type": "hasMany",
+      "model": "track",
+      "foreignKey": ""
+    },
+    "playlists": {
+      "type": "hasMany",
+      "model": "playlist",
+      "foreignKey": ""
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "comment",
+      "foreignKey": ""
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "like",
+      "foreignKey": "",
+      "through": "like"
+    },
+    "susbcriptions": {
+      "type": "hasMany",
+      "model": "user",
+      "foreignKey": "",
+      "through": "subcription"
+    }
+  },
+  "acls": [],
+  "methods": []
+}
